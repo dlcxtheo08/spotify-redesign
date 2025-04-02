@@ -1,0 +1,122 @@
+/* src/components/Cards/PlaylistCard.css */
+.playlist-card {
+    background: rgba(30, 30, 63, 0.4);
+    border-radius: 12px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+  }
+  
+  .playlist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(138, 43, 226, 0.2);
+  }
+  
+  .card-image-container {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1;
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .playlist-card:hover .card-image {
+    transform: scale(1.05);
+  }
+  
+  .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(18, 18, 18, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    /* Assurez-vous que l'overlay est positionné correctement */
+    z-index: 1;
+  }
+  
+  .playlist-card:hover .card-overlay {
+    opacity: 1;
+  }
+  
+  .play-button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--color-vert);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    cursor: pointer;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+    /* Ajoutez ces propriétés pour s'assurer que le bouton est visible */
+    position: relative;
+    z-index: 2;
+  }
+  
+  .playlist-card:hover .play-button {
+    transform: scale(1);
+  }
+  
+  .card-content {
+    padding: 16px;
+  }
+  
+  .card-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: white;
+  }
+  
+  .card-description {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  /* Effet spécial pour les memory playlists */
+  .memory-card {
+    background: linear-gradient(135deg, rgba(30, 30, 63, 0.4), rgba(138, 43, 226, 0.2));
+  }
+  
+  .memory-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--color-violet), transparent, var(--color-vert));
+    z-index: -1;
+    border-radius: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .memory-card:hover::before {
+    opacity: 1;
+  }
+
+  .play-button svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+    /* Utiliser une couleur contrastée avec le fond du bouton */
+    color: black;
+    fill: none; /* Gardez ceci à "none" car c'est une icône outline */
+  }

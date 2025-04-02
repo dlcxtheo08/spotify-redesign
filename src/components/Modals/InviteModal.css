@@ -1,0 +1,117 @@
+/* src/components/Modals/InviteModal.css */
+.friends-section {
+    margin: 20px 0;
+  }
+  
+  .friends-section h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .friends-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  .friend-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .friend-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .friend-item.selected {
+    background: rgba(138, 43, 226, 0.3);
+    border: 1px solid var(--color-violet);
+  }
+  
+  .friend-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .friend-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .friend-name {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .friend-email {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .link-section {
+    margin-bottom: 20px;
+  }
+  
+  .link-section label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .link-container {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .invite-link {
+    flex: 1;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+  }
+  
+  .copy-button {
+    background: var(--color-vert);
+    color: black;
+    border: none;
+    padding: 0 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .copy-button:hover {
+    background: var(--color-vert);
+    opacity: 0.9;
+  }
+  
+  .invite-button {
+    background: var(--color-violet);
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .invite-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(138, 43, 226, 0.3);
+  }

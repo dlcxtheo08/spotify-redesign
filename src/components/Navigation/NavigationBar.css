@@ -1,0 +1,79 @@
+/* src/components/Navigation/NavigationBar.css */
+.navigation-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    background: rgba(18, 18, 18, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 100;
+  }
+  
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-item img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 5px;
+  }
+  
+  .nav-item:hover {
+    color: var(--color-vert);
+    transform: translateY(-5px);
+  }
+  
+  /* Adaptation pour différents appareils */
+  @media (min-width: 768px) {
+    .navigation-bar {
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 100px;
+      flex-direction: column;
+      border-top: none;
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .nav-item {
+      margin: 20px 0;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .navigation-bar {
+      width: 240px;
+    }
+    
+    .nav-item {
+      flex-direction: row;
+      justify-content: flex-start;
+      padding-left: 20px;
+    }
+    
+    .nav-item img {
+      margin-right: 15px;
+      margin-bottom: 0;
+    }
+  }
+
+  /* Ajoutez à NavigationBar.css */
+.nav-item.active {
+    color: var(--color-vert);
+  }
+  
+  @media (min-width: 768px) {
+    .nav-item.active {
+      border-left: 3px solid var(--color-vert);
+    }
+  }

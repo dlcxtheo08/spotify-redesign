@@ -1,0 +1,198 @@
+/* src/components/Profile/ListeningHistory.css */
+.listening-history {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 10px;
+  }
+  
+  .history-header h2 {
+    font-size: 20px;
+    color: white;
+    margin: 0;
+  }
+  
+  .history-filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .filter-button {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .filter-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .filter-button.active {
+    background: var(--color-violet);
+    border-color: var(--color-violet);
+  }
+  
+  .history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .history-item {
+    display: flex;
+    align-items: center;
+    background: rgba(30, 30, 63, 0.3);
+    border-radius: 12px;
+    padding: 12px;
+    transition: background 0.2s ease;
+  }
+  
+  .history-item:hover {
+    background: rgba(30, 30, 63, 0.5);
+  }
+  
+  .history-time {
+    width: 80px;
+    text-align: center;
+    margin-right: 15px;
+  }
+  
+  .time {
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+  }
+  
+  .date {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .history-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: 0;
+  }
+  
+  .history-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .history-info {
+    min-width: 0;
+    overflow: hidden;
+  }
+  
+  .history-title {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .history-subtitle {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .history-type-tag {
+    display: inline-block;
+    font-size: 12px;
+    color: white;
+    background: rgba(138, 43, 226, 0.3);
+    padding: 2px 8px;
+    border-radius: 10px;
+  }
+  
+  .history-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .history-action {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    color: white;
+    transition: all 0.2s ease;
+  }
+  
+  .play-action {
+    background: var(--color-vert);
+    color: black;
+  }
+  
+  .more-action {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .play-action:hover {
+    transform: scale(1.1);
+  }
+  
+  .more-action:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .no-history {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  @media (max-width: 768px) {
+    .history-item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    
+    .history-time {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-right: 0;
+      text-align: left;
+    }
+    
+    .history-content {
+      width: 100%;
+    }
+    
+    .history-actions {
+      width: 100%;
+      justify-content: flex-end;
+    }
+  }

@@ -1,0 +1,21 @@
+:root {
+    /* Couleurs de la charte */
+    --color-noir: #121212;
+    --color-vert: #1ED760;
+    --color-violet: #8A2BE2;
+    --color-bleu: #1E1E3F;
+    
+    /* Typographies */
+    --font-title: 'Space Grotesk', sans-serif;
+    --font-text: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background-color: var(--color-noir);
+    color: white;
+    font-family: var(--font-text);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-title);
+  }

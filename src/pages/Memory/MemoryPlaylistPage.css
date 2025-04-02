@@ -1,0 +1,100 @@
+/* src/pages/Memory/MemoryPlaylistPage.css */
+.memory-playlist-page {
+    padding: 20px;
+    padding-bottom: 100px;
+  }
+  
+  .page-header {
+    margin-bottom: 30px;
+  }
+  
+  .page-header h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, white, var(--color-vert));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .subtitle {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .filters-section {
+    margin-bottom: 30px;
+  }
+  
+  .memory-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .filter-button {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .filter-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .filter-button.active {
+    background: var(--color-violet);
+    box-shadow: 0 0 10px rgba(138, 43, 226, 0.4);
+  }
+  
+  .memories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  
+  .no-memories {
+    background: rgba(30, 30, 63, 0.3);
+    border-radius: 12px;
+    padding: 40px 20px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .no-memories p {
+    margin: 10px 0;
+  }
+  
+  /* Responsive design */
+  @media (min-width: 768px) {
+    .memory-playlist-page {
+      padding-left: 120px;
+      padding-bottom: 20px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .memory-playlist-page {
+      padding-left: 260px;
+    }
+    
+    .memories-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .memory-filters {
+      flex-direction: column;
+    }
+    
+    .filter-button {
+      width: 100%;
+      text-align: center;
+    }
+  }

@@ -1,0 +1,132 @@
+.featured-section {
+    margin-bottom: 40px;
+  }
+  
+  .section-header {
+    margin-bottom: 20px;
+  }
+  
+  .section-header h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  .section-description {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .featured-items {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+  
+  .featured-items::-webkit-scrollbar {
+    height: 4px;
+  }
+  
+  .featured-items::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+  }
+  
+  .featured-items::-webkit-scrollbar-thumb {
+    background: var(--color-vert);
+    border-radius: 4px;
+  }
+  
+  .featured-item {
+    min-width: 300px;
+    background: rgba(30, 30, 63, 0.4);
+    border-radius: 12px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+  }
+  
+  .featured-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(138, 43, 226, 0.2);
+  }
+  
+  .item-image-container {
+    position: relative;
+    height: 168px;
+    overflow: hidden;
+  }
+  
+  .item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .featured-item:hover .item-image {
+    transform: scale(1.05);
+  }
+  
+  .item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(18, 18, 18, 0.3);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 10px;
+  }
+  
+  .live-badge {
+    background: #ff0000;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .item-content {
+    padding: 16px;
+  }
+  
+  .item-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: white;
+  }
+  
+  .item-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .item-host, .item-listeners {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+  }
+  
+  .item-description {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.4;
+  }
+  
+  /* Live party specific styles */
+  .live-party .item-image-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.7) 100%);
+  }
